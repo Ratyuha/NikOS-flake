@@ -1,4 +1,4 @@
-{ config, pkgs, ... }; {
+{ config, pkgs, ... }: {
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -6,7 +6,7 @@
       layer = "top";
       position = "top";
       height = 24;
-      margin = 8;
+      margin = "8";
       spacing = 8;
       reload_style_on_change = true;
       modules-left = [ "image#niko" "clock" ];
@@ -22,7 +22,7 @@
           critical = 15;
         };
         format = "{capacity}% {icon}";
-        format-icons = ["", "", "", "", ""];
+        format-icons = ["" "" "" "" ""];
         max-length = 25;
       };
       network = {
@@ -46,10 +46,10 @@
         tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
       };
       "image#niko" = {
-        exec = "./niko.png";
+        exec = ./niko.png;
         size = 28;
       };
     }];
-    style = "${builtins.readFile "./style.css"}";
+    style = builtins.readFile ./style.css;
   };
 }

@@ -16,5 +16,6 @@
     ./gtk.nix
     ./fastfetch
     ./xdg.nix
+    ./waybar
   ];
 }
