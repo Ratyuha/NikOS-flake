@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Argument to this - path to powermenu theme, because Nix
+
+rofi_command="rofi"
+shutdown="󰐥"
+reboot="󰜉"
+lock="󰍁"
+suspend="󰒲"
+logout="󰍃"
+
+# Variable passed to rofi
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -dmenu -theme "${1}" -selected-row 0 -no-show-icons)"
+case $chosen in
+    $shutdown)
+			systemctl poweroff
+      ;;
+    $reboot)
+			systemctl reboot
+      ;;
+    $lock)
+      sh $HOME/.local/bin/lock
+      ;;
+    $suspend)
+			mpc -q pause
+			amixer set Master mute
+			sh $HOME/.local/bin/lock
+			systemctl suspend
+      ;;
+    $logout)
+			niri msg exit
+			exit
+      ;;
+esac
