@@ -90,7 +90,7 @@
 
     # Start dunst and background daemon
     spawn-at-startup = [ 
-      { argv = [ "dunst" ]; }
+      { argv = [ "dunst" "waybar"]; }
       { sh = "swaybg -i ~/nix/home/niri/wallpaper.png"; }
     ];
     
