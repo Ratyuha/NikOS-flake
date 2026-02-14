@@ -46,7 +46,7 @@
         tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
       };
       "image#niko" = {
-        exec = "/home/ratyuha/nix/home/waybar/niko.png";
+        path = "/home/ratyuha/nix/home/waybar/niko.png";
         size = 28;
       };
     }];
