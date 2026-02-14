@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -46,7 +46,7 @@
         tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
       };
       "image#niko" = {
-        exec = ./niko.png;
+        exec = "/home/ratyuha/nix/home/waybar/niko.png";
         size = 28;
       };
     }];
