@@ -2,10 +2,11 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
+    style = builtins.readFile ./style.css;
     settings = [{
       layer = "top";
       position = "top";
-      height = 24;
+      height = 28;
       margin = "8";
       spacing = 8;
       reload_style_on_change = true;
@@ -50,6 +51,5 @@
         size = 28;
       };
     }];
-    style = builtins.readFile ./style.css;
   };
 }

@@ -16,6 +16,7 @@
   };
   programs.appimage.enable = true;
   programs.adb.enable = true;
+  services.dbus.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
@@ -78,6 +79,7 @@
     fastfetch
     alacritty
     firefox
+    waybar
   ];
 
   fonts.packages = with pkgs; [
