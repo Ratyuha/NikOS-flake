@@ -80,6 +80,8 @@
     alacritty
     firefox
     waybar
+    prismlauncher
+    aseprite
   ];
 
   fonts.packages = with pkgs; [
