@@ -92,7 +92,7 @@
     spawn-at-startup = [ 
       { argv = [ "dunst" ]; }
       { argv = [ "waybar" ]; }
-      { sh = "swaybg -i ~/nix/home/niri/wallpaper.png"; }
+      { sh = "swaybg -i ~/.config/nixos/home/niri/wallpaper.png"; }
     ];
     
     prefer-no-csd = true;

@@ -24,6 +24,7 @@
       ];
       theme = "simple";
     };
+    initExtraFirst = "fastfetch";
   };
 
   programs.zoxide = {
