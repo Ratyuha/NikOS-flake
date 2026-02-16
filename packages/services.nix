@@ -5,7 +5,7 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us,ru";
-    xkb.options = "grp:ctrl_space_toggle";
+    xkb.options = "grp:caps_toggle";
     excludePackages = [ pkgs.xterm ];
   };
   services.printing = {
@@ -22,6 +22,7 @@
     wireplumber.enable = true;
     jack.enable = true;
   };
+  services.dbus.enable = true;
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

@@ -32,6 +32,8 @@
   
     # Fix for electron apps (like discord, obsidian, steam and etc)
     environment."NIXOS_OZONE_WL" = "1";
+    environment."ELECTRON_OZONE_PLATFORM_HINT" = "auto";
+    environment."MOZ_ENABLE_WAYLAND" = "1";
 
     # Rule for transparent background in overview
     layer-rules = [
