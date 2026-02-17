@@ -83,6 +83,7 @@
     aseprite
     unciv
     mindustry-wayland
+    dysk
   ];
 
   fonts.packages = with pkgs; [
