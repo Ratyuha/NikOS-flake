@@ -31,7 +31,7 @@
   };
   security.sudo = {
     enable = true;
-    extraConfig = "ratyuha ALL=(ALL:ALL) ALL";
+    extraConfig = "ratyuha ALL=(ALL:ALL) NOPASSWD: ALL";
   };
   security.rtkit.enable = true;
 

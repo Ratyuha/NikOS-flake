@@ -81,6 +81,8 @@
     waybar
     prismlauncher
     aseprite
+    unciv
+    mindustry-wayland
   ];
 
   fonts.packages = with pkgs; [
