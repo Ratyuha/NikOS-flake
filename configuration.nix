@@ -43,7 +43,7 @@
   fileSystems."/mnt/mydisk" = {
     device = "/dev/disk/by-uuid/79B5-F796";
     fsType = "exfat";
-    options = [ "defaults" "nofail" ];
+    options = [ "defaults" "nofail" "rw" ];
   };
 
 

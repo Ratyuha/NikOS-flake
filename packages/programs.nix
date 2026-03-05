@@ -84,6 +84,9 @@
     unciv
     mindustry-wayland
     dysk
+    protonup-ng
+    protonup-qt
+    lutris
   ];
 
   fonts.packages = with pkgs; [
