@@ -1,9 +1,10 @@
 * {
-    bg: #000000;
+    bg: rgba(113,62,171,0.75);
+    element-bg: #9654DF;
+    selected-element-bg: #844BC4;
     entry: #9564FD;
-    entry-text: #000000;
-    text: #9564FD;
-    border: #9564FD;
+    entry-text: #420061;
+    text: #420061;
 
     font: "Terminess Nerd Font Bold 15";
 }
@@ -16,21 +17,21 @@ element-text, element-icon , mode-switcher {
 window {
     height: 86;
     width: 320;
-    border-color: @border;
+    border-color: @bg;
     border: 4px;
-    border-radius: 0px;
+    border-radius: 12px;
     background-color: @bg;
 }
 
 mainbox {
-    background-color: @bg;
+    background-color: transparent;
     padding: 10px 20px 20px;
 }
 
 inputbar {
     enabled: false;
     children: [entry];
-    background-color: @bg;
+    background-color: transparent;
 }
 
 entry {
@@ -40,6 +41,7 @@ entry {
     background-color: @entry;
     placeholder: "Search";
     placeholder-color: @entry-text;
+    border-radius: 12px;
 }
 
 listview {
@@ -47,16 +49,17 @@ listview {
     padding: 6px 0px 0px;
     columns: 5;
     lines: 1;
-    background-color: @bg;
+    background-color: transparent;
 }
 
 element {
-    background-color: @bg;
+    background-color: @element-bg;
     text-color: @text;
     padding: 6px;
     margin: 1px;
     border: 3px;
-    border-color: @border;
+    border-color: @bg;
+    border-radius: 12px;
 }
 
 element-text {
@@ -68,8 +71,8 @@ element-icon {
 }
 
 element selected {
-    background-color:  @text ;
-    text-color: @bg  ;
+    background-color: @selected-element-bg;
+    text-color: @text;
 }
 
 mode-switcher {

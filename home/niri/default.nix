@@ -160,7 +160,7 @@
       "Mod+Shift+4".action = spawn "${./scripts/selection-screenshot}";
       "Mod+Shift+E".action = quit;
       "Mod+Shift+P".action = power-off-monitors;
-      "Mod+P".action = spawn-sh "${./scripts/powermenu/script} ${./scripts/powermenu/powermenu.rasi}";
+      "Mod+P".action = spawn-sh "${./scripts/powermenu/script} ${./scripts/powermenu/nikopower.rasi}";
     };
   };
 }
