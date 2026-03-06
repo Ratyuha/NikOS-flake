@@ -87,6 +87,7 @@
     protonup-ng
     protonup-qt
     lutris
+    zerotierone
   ];
 
   fonts.packages = with pkgs; [
