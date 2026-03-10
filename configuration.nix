@@ -27,7 +27,7 @@
   users.users.ratyuha = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" "docker" ];
   };
   security.sudo = {
     enable = true;

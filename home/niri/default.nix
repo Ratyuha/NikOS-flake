@@ -54,16 +54,6 @@
         open-focused = false;
       }
       {
-        matches = [
-          { app-id = "kitty"; title = "^termfilechooser$"; }
-          { app-id = "file_chooser"; title = "^ranger$"; }
-        ];
-        open-floating = true;
-        max-height = 480;
-        max-width = 640;
-        default-window-height.fixed = 480;
-      }
-      {
         clip-to-geometry = true;
         geometry-corner-radius = {
           bottom-left = 12.0;

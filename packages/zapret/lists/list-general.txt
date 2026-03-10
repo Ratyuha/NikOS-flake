@@ -324,3 +324,6 @@ static.ads-twitter.com
 twimg.com
 pbs.twimg.com
 video.twimg.com
+wiki.nixos.org
+nixos.wiki
+nixos.org

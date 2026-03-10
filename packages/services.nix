@@ -31,4 +31,5 @@
     enable = true;
     extraPackages = with pkgs; [ vpl-gpu-rt ];
   };
+  virtualisation.docker.enable = true;
 }

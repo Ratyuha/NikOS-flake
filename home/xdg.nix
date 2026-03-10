@@ -17,31 +17,19 @@
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
+      xdg-desktop-portal
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gnome
-      # xdg-desktop-portal-gtk
-      xdg-desktop-portal-termfilechooser
     ];
-    config.niri = {
-      default = [ "gnome" "wlr" "termfilechooser" ];
-      "org.freedesktop.impl.portal.FileChooser" = "termfilechooser";
+    config = {
+      common = {
+        default = [ "gnome" ];
+      };
+      niri = {
+        default = [ "gnome" "wlr" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
+      };
     };
     xdgOpenUsePortal = false;
-  };
-
-  home.sessionVariables = {
-    TERMCMD = "kitty --class=file_chooser";
-    GDK_DEBUG = "portals";
-    GTK_USE_PORTAL = "1";
-    QT_QPA_PLATFORMTHEME = "xdgdesktopportal";
-  };
-
-  xdg.configFile."xdg-desktop-portal-termfilechooser/config" = {
-    force = true;
-    text =
-    ''
-      [filechooser]
-      cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/ranger-wrapper.sh
-    '';
   };
 }

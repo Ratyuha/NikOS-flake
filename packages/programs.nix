@@ -88,6 +88,7 @@
     protonup-qt
     lutris
     zerotierone
+    winboat
   ];
 
   fonts.packages = with pkgs; [
