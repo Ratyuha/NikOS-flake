@@ -33,7 +33,6 @@
     ranger
     wget
     home-manager
-    brightnessctl
     pulseaudio
     libnotify
     wl-clipboard
@@ -51,14 +50,12 @@
     obsidian
     imagemagick
     libreoffice
-    bluetui
     thunderbird
     telegram-desktop
     zip
     p7zip
     unzip
     unrar
-    rustup
     gamemode
     gnome-calculator
     gcc
@@ -66,7 +63,6 @@
     steamcmd
     gdb
     ffmpeg
-    mpvpaper
     lua
     feh
     wineWowPackages.stable
@@ -76,7 +72,6 @@
     legcord
     krita
     fastfetch
-    alacritty
     firefox
     waybar
     prismlauncher
