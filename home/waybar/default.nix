@@ -25,7 +25,7 @@
         format = "{capacity}% {icon}";
         format-icons = ["" "" "" "" ""];
         max-length = 25;
-      };
+      :};
       network = {
         format-ethernet = "";
         format-wifi = "󰖩";

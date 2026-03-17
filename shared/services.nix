@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{config, pkgs, ...}: {
   imports = [
     ./zapret
   ];
@@ -8,10 +8,7 @@
     xkb.options = "grp:caps_toggle";
     excludePackages = [ pkgs.xterm ];
   };
-  services.printing = {
-    enable = true;
-    drivers = [ pkgs.hplipWithPlugin ];
-  };
+  services.displayManager.sddm.enable = true;
   services.libinput.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
@@ -23,12 +20,9 @@
     jack.enable = true;
   };
   services.dbus.enable = true;
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [ vpl-gpu-rt ];
   };
   virtualisation.docker.enable = true;

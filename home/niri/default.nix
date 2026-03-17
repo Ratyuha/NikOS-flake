@@ -15,13 +15,13 @@
       };
     };
 
-    # My main monitor on worldmachine
+    # My main monitor on pc
     outputs."HDMI-A-1" = {
       enable = true;
       mode = {
-          width = 1920;
-          height = 1080;
-          refresh = 100.000;
+          width = 1680;
+          height = 1050;
+          refresh = 59.954;
       };
       scale = 1;
       position = { x = 1280; y = 0; };
@@ -83,7 +83,6 @@
     # Start dunst and background daemon
     spawn-at-startup = [ 
       { argv = [ "dunst" ]; }
-      { argv = [ "waybar" ]; }
       { sh = "swaybg -i ~/.config/nixos/home/niri/wallpaper.png"; }
     ];
     

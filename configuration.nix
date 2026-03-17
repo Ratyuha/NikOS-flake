@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [./packages];
-
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -40,12 +38,5 @@
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
-  fileSystems."/mnt/mydisk" = {
-    device = "/dev/disk/by-uuid/79B5-F796";
-    fsType = "exfat";
-    options = [ "defaults" "nofail" "rw" ];
-  };
-
-
   system.stateVersion = "25.11";
 }

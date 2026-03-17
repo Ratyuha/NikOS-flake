@@ -30,11 +30,14 @@
             { networking.hostName = hostname; }
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix
+            ./shared
+            ./hosts/${hostname}/default.nix
           ];
         };
     in {
       nixosConfigurations = {
         nikopad = mkSystem nixpkgs system "nikopad";
+        nikostation = mkSystem nixpkgs system "nikostation";
       };
       homeConfigurations.ratyuha = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
