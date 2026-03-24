@@ -20,6 +20,7 @@
     jack.enable = true;
   };
   services.dbus.enable = true;
+  services.udisks2.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
