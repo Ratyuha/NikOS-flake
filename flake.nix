@@ -7,10 +7,6 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, ... }@inputs:
@@ -42,7 +38,6 @@
       homeConfigurations.ratyuha = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          niri.homeModules.niri
           ./home
         ];
       };
