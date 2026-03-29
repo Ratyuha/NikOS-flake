@@ -82,7 +82,6 @@
     protonup-ng
     protonup-qt
     lutris
-    zerotierone
     winboat
   ];
 

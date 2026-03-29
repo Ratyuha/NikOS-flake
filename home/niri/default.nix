@@ -83,6 +83,7 @@
     # Start dunst and background daemon
     spawn-at-startup = [ 
       { argv = [ "dunst" ]; }
+      { argv = [ "xwayland-satellite" ];  }
       { sh = "swaybg -i ~/.config/nixos/home/niri/wallpaper.png"; }
     ];
     
