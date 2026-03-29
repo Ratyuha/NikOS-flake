@@ -2,13 +2,10 @@
   imports = [
     ./zapret
   ];
-  services.xserver = {
+  services.displayManager.sddm = {
     enable = true;
-    xkb.layout = "us,ru";
-    xkb.options = "grp:caps_toggle";
-    excludePackages = [ pkgs.xterm ];
+    wayland.enable = true;
   };
-  services.displayManager.sddm.enable = true;
   services.libinput.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
@@ -21,6 +18,10 @@
   };
   services.dbus.enable = true;
   services.udisks2.enable = true;
+  services.zerotierone = {
+    enable = true;
+    joinNetworks = [ "88c5b1f339bfdecf" ];
+  };
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
