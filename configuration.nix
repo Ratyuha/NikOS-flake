@@ -4,13 +4,22 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot = { 
+    kernelPackages = pkgs.linuxPackages_zen;
+    kernelModules = [
+      "v4l2loopback"
+      "snd-aloop"
+    ];
+    extraModulePackages = [ 
+      pkgs.linuxKernel.packages.linux_zen.v4l2loopback
+    ];
+  };
   networking = {
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 22 80 443 27005 27015 27016 ];
-      allowedUDPPorts = [ 22 80 443 27005 27015 27016 ];
+      allowedTCPPorts = [ 22 80 443 4747 27005 27015 27016 ];
+      allowedUDPPorts = [ 22 80 443 4747 27005 27015 27016 ];
     };
   };
 

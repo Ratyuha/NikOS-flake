@@ -11,5 +11,7 @@
     libvorbis
     libkrb5
     keyutils
+    droidcam
+    linuxKernel.packages.linux_zen.v4l2loopback
   ];
 }

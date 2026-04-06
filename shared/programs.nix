@@ -83,6 +83,8 @@
     protonup-qt
     lutris
     winboat
+    v4l-utils
+    pavucontrol
   ];
 
   fonts.packages = with pkgs; [
