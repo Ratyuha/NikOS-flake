@@ -9,13 +9,12 @@
   imports = [
     ./kitty.nix
     ./zsh.nix
-    ./niri
     ./rofi
     ./dunst.nix
     ./gh.nix
     ./gtk.nix
     ./fastfetch
     ./xdg.nix
-    ./waybar
+    ./i3
   ];
 }

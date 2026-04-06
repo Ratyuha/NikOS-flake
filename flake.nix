@@ -9,7 +9,7 @@
     };
   };
   
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -22,7 +22,6 @@
             inherit pkgs-unstable;
           };
           modules = [
-            niri.nixosModules.niri
             { networking.hostName = hostname; }
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix

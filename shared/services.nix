@@ -2,10 +2,14 @@
   imports = [
     ./zapret
   ];
-  services.displayManager.sddm = {
+  services.xserver = {
     enable = true;
-    wayland.enable = true;
+    xkb.layout = "us,ru";
+    xkb.options = "grp:caps_toggle";
+    windowManager.i3.enable = true;
+    excludePackages = [ pkgs.xterm ];
   };
+  services.displayManager.sddm.enable = true;
   services.libinput.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
