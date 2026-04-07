@@ -3,5 +3,6 @@
     ./programs.nix
     ./services.nix
     ./mount.nix
+    ./autorandr.nix
   ];
 }

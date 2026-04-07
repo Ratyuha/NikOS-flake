@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
   
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -23,6 +24,7 @@
           };
           modules = [
             { networking.hostName = hostname; }
+            nix-flatpak.nixosModules.nix-flatpak
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix
             ./shared
@@ -37,6 +39,7 @@
       homeConfigurations.ratyuha = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
+          nix-flatpak.nixosModules.nix-flatpak
           ./home
         ];
       };

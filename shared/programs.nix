@@ -85,6 +85,8 @@
     winboat
     v4l-utils
     pavucontrol
+    r2modman
+    blockbench
   ];
 
   fonts.packages = with pkgs; [

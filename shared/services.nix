@@ -22,6 +22,12 @@
   };
   services.dbus.enable = true;
   services.udisks2.enable = true;
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "io.github.Soundux"
+    ];
+  };
   services.zerotierone = {
     enable = true;
     joinNetworks = [ "88c5b1f339bfdecf" ];
