@@ -25,7 +25,7 @@
   services.flatpak = {
     enable = true;
     packages = [
-      "io.github.Soundux"
+      "moe.launcher.the-honkers-railway-launcher"
     ];
   };
   services.zerotierone = {
