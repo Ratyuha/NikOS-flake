@@ -16,5 +16,6 @@
     ./fastfetch
     ./xdg.nix
     ./i3
+    ./picom.nix
   ];
 }

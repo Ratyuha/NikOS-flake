@@ -19,7 +19,7 @@
         size = 13.0;
       };
       window = {
-        border = 2;
+        border = 4;
         titlebar = false;
       };
       floating = {

@@ -9,6 +9,7 @@
       home-update = "home-manager switch --flake ~/.config/nixos";
       cd = "z";
       ls = "eza --icons=always -1";
+      battery = "cat /sys/class/power_supply/BAT1/capacity";
     };
     plugins = [
       {

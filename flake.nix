@@ -39,7 +39,6 @@
       homeConfigurations.ratyuha = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          nix-flatpak.nixosModules.nix-flatpak
           ./home
         ];
       };
