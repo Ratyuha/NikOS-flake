@@ -20,3 +20,4 @@
       blur-strength = 4;
     };
   };
+}
