@@ -82,7 +82,6 @@
     protonup-ng
     protonup-qt
     lutris
-    winboat
   ];
 
   fonts.packages = with pkgs; [
