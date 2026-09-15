@@ -17,5 +17,6 @@
     ./fastfetch
     ./xdg.nix
     ./waybar
+    ./nixvim
   ];
 }

@@ -15,7 +15,6 @@
     ];
   };
   programs.appimage.enable = true;
-  programs.adb.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
@@ -65,7 +64,6 @@
     ffmpeg
     lua
     feh
-    wineWowPackages.stable
     winetricks
     stylua
     gmad
@@ -82,6 +80,8 @@
     protonup-ng
     protonup-qt
     lutris
+    jdk25
+    android-tools
   ];
 
   fonts.packages = with pkgs; [
