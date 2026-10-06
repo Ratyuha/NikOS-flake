@@ -12,9 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim.url = "github:nix-community/nixvim";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
   
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -28,6 +29,8 @@
           };
           modules = [
             niri.nixosModules.niri
+	    nixvim.nixosModules.nixvim
+	    nix-flatpak.nixosModules.nix-flatpak
             { networking.hostName = hostname; }
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix
@@ -45,6 +48,7 @@
         modules = [
           niri.homeModules.niri
           nixvim.homeModules.nixvim
+	  nix-flatpak.nixosModules.nix-flatpak
           ./home
         ];
       };

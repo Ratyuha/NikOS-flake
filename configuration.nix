@@ -18,6 +18,7 @@
   networking.extraHosts = "
     185.199.109.133 release-assets.githubusercontent.com
   ";
+  # РКН пошел нахуй
 
   # Timezone
   time.timeZone = "Europe/Kaliningrad";

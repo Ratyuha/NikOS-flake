@@ -82,6 +82,8 @@
     lutris
     jdk25
     android-tools
+    r2modman
+    gptfdisk
   ];
 
   fonts.packages = with pkgs; [
